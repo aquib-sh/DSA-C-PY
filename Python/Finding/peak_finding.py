@@ -1,3 +1,7 @@
+# Author: Shaikh Aquib
+# Peak Finding Algorithm using Recursive Approach
+# Time Complexity: O(log2n)
+
 def find(arr, start, end, n):
     if (start == 0 and end == (n-1)):
         if arr[start] > arr[start+1]:
