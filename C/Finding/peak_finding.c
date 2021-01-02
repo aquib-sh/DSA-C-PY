@@ -21,7 +21,6 @@ int find(int *arr, int start, int end, int len)
 
 	// Get the mid and check whether its peak
 	int mid = (start + end)/2;	
-	printf("Current mid: %d\n",mid);	
 
 	// Enter only if the mid is between array range
 	if(mid > 0 && mid < len) {
