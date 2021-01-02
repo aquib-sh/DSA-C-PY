@@ -8,10 +8,8 @@ def search(arr, to_search):
             return i
     return -1
 
-
 if __name__ == "__main__":
-    arr = [10,20,30,44,66,10]
-    
+    arr = [10,20,30,44,66,10]    
     to_search = int(input("Enter an element to search: "))
     got = search(arr, to_search)
     if got == -1:

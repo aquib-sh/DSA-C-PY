@@ -1,3 +1,8 @@
+/*** Author: Shaikh Aquib
+     Simple Linear Search Algorithm
+     Time Complexity is O(n)
+*/
+
 #include<stdio.h>
 
 int ar_search(int *arr, int val) 
@@ -13,7 +18,6 @@ int ar_search(int *arr, int val)
 
 int main()
 {
-	
 	int arr[] = {10, 20, 40, 65, 39, 44};
 	printf("enter the value to search: ");
 	int e;
