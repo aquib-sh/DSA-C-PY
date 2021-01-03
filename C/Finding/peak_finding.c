@@ -10,7 +10,6 @@ int find(int *arr, int start, int end, int len)
 {
 	// Check for the peak at start and end when entered for 1st time
 	if(start == 0 && end == (len-1)) {
-		int len = sizeof(arr)/sizeof(arr[0]);
 		if(arr[0] > arr[1]) {
 			return start;
 		}
