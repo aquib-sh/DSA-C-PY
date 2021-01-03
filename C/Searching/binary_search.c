@@ -9,14 +9,20 @@ int search(int *arr, int elem, int start, int stop, int len)
 {
         // Eliminate the possiblilty of element being lesser or greater
         // in the first step to avoid unnecessary computations further
-        if (start == 0 && stop == (len-1)) {
-                if (elem > arr[stop]) {
-                       return -1;
+        if (start > stop) {
+                return -1;
+        } 
+        else {
+                if (start == 0 && stop == (len-1)) {
+                        if (elem > arr[stop]) {
+                            return -1;
                 }
-                else if(elem < arr[start]) {
+                else if (elem < arr[start]) {
                         return -1;
                 }
+            }
         }
+
 
         int mid = (start + stop) / 2;
         
@@ -25,16 +31,16 @@ int search(int *arr, int elem, int start, int stop, int len)
         }
         else {
                 if (elem < arr[mid]) {
-                        search(arr, elem, start, (mid-1), len);
+                        return search(arr, elem, start, (mid-1), len);
                 }
                 else if (elem > arr[mid]) {
-                        search(arr, elem, (mid+1), stop, len);
+                        return search(arr, elem, (mid+1), stop, len);
                 }
         }
 }
 
 int main() {
-        int arr[] = {10,20,30,40,50,60,70,80};
+        int arr[] = {10,20,30,40,50,60,70,99,101};
         printf("Enter an element to search: ");
         int want;
         scanf("%d", &want);
